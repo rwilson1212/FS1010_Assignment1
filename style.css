@@ -1,0 +1,148 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    max-width: 1100px;
+    background-color:#d5d5d5 ;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    
+}
+
+header{
+    margin-left: 4%;
+    padding-left: 1em;
+}
+
+h1{
+    font-weight:normal;
+}
+
+h2{
+    font-weight: normal;
+    color: gray;
+}
+
+.special {
+    font-weight: bold;
+   }
+
+/* Image Container*/
+.imageContainer{
+    display: inline-block;
+    max-width: 800px;
+    max-height: 585px;
+    height: fit-content;
+    column-count: 3;
+    column-width: 240.21px;
+    margin-left: 4%;
+    padding-left: 1em;
+    padding-bottom: 0;
+    column-gap: .5em;
+    }
+
+.imageContainer img{
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    }
+
+.imgFrame{
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    
+    }
+
+.overlay{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background: linear-gradient(to bottom right, rgba(255,255,255,1) 50%, rgba(255,0,0,0) 50%);
+    transition: .5s ease;
+}
+
+.overlayText{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    color: black;
+    z-index: 1;
+
+}
+
+.overlayText h3{
+
+    padding-left: 1rem;
+    font-size: medium;
+
+}
+.overlayText p{
+
+    font-size: smaller;
+    padding-left: 1rem;
+
+}
+
+.imgFrame:hover .overlay{  
+        opacity: .5;
+}
+
+.imgFrame:hover .overlayText{
+    opacity: 1;
+}
+   
+/* Social Media Links*/
+
+.socialMedia{
+    display: block;
+    padding-top: 1rem;
+    padding-left: 1em;
+    margin-left: 4%;
+    }
+
+
+i{
+    margin-right: 1em;
+    color: black;
+    }
+
+i:hover{
+    color: gray;
+    }
+
+/* responsive media */
+@media screen and (max-width: 1000px) {
+
+    .imageContainer{
+        column-count: 2;
+        max-height: 2500px;
+               
+        }
+
+}
+
+@media screen and (max-width: 675px) {
+
+    .imageContainer{
+        column-count: 1;
+        max-height: 3000px;       
+        }
+
+}
